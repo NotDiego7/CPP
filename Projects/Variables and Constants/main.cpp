@@ -1,63 +1,66 @@
 // Section 6
-// Primitive Types
+// The sizeof operator
 
 #include <iostream>
+#include <climits>      // make sure you include climits for integer types
+                                  // Similar information for floating point numbers
+                                  // is contained in <cfloat>
 
 using namespace std;
 
 int main() {
-//    /***********************************************
-//     *  Character type
-//     **********************************************/
-//     char middle_initial {'J'};  // Notice the single quotes around characters
-//     cout << "My middle initial is " << middle_initial << endl;
-    
-    // /***********************************************
-    // *  Integer types
-    // **********************************************/
-    // unsigned short int exam_score {55};  // same as unsigned short exam_score {55};
-    // cout << "My exam score was " << exam_score << endl;
 
-    // int countries_represented {65};
-    // cout << "There were " << countries_represented << " countries represented in my meeting" << endl;
+    cout << "sizeof information" << endl;
+    cout << "========================" << endl;
     
-    // long people_in_florida {20610000};
-    // cout << "There are about " << people_in_florida << " people in Florida" << endl;
-   
-    // long long people_on_earth  {7'600'000'000};     // make sure this is a long long and not just a long
-    // cout << "There are about " << people_on_earth << " people on earth" << endl;
+    cout << "char: " << sizeof(char) << " bytes." << endl;
+    cout << "int : " << sizeof(int) << " bytes." << endl;
+    cout << "unsigned int: " << sizeof(unsigned int) << " bytes." << endl;
+    cout << "short: " << sizeof(short) << " bytes." << endl;
+    cout << "long: " << sizeof(long) << " bytes." << endl;
+    cout << "long long: " << sizeof(long long) << " bytes." << endl;
     
-    // long long distance_to_alpha_centauri {9'461'000'000'000};
-    // cout << "The distance to alpha centauri is " << distance_to_alpha_centauri << " kilometers" << endl;
+    cout << "========================" << endl;
+
+    cout << "float: " << sizeof(float) << " bytes." << endl;
+    cout << "double: " << sizeof(double) << " bytes." << endl;
+    cout << "long double: " << sizeof(long double) << " bytes." << endl;
+
+//
+    // use values defined in <climits>
+    cout << "========================" << endl;
     
-   
-    /***********************************************
-    *  Floating point types
-    **********************************************/
-    float  car_payment { 401.23};
-    cout << "My car payment is " << car_payment << endl;
+    cout << "Minimum values:" << endl;
+    cout << "char: " << CHAR_MIN << endl;
+    cout << "int: " << INT_MIN << endl;
+    cout << "short: " << SHRT_MIN << endl;
+    cout << "long: " << LONG_MIN << endl; 
+    cout << "long long: " << LLONG_MIN << endl;
+//     
+    cout << "========================" << endl;
     
-    double pi {3.14159};
-    cout << "PI is " << pi << endl;
+    cout << "Maximum values:" << endl;
+    cout << "char: " << CHAR_MAX << endl;
+    cout << "int: " << INT_MAX << endl;
+    cout << "short: " << SHRT_MAX << endl;
+    cout << "long: " << LONG_MAX << endl; 
+    cout << "long long: " << LLONG_MAX << endl;
+//    
+    // sizeof can also be used with variable names
+    cout << "========================" << endl;
     
-    long double large_amount {2.7e120};
-    cout << large_amount << " is a very big number" << endl;
-    
-    // /***********************************************
-    // *  Boolean type
-    // **********************************************/
-    // bool game_over {false};
-    // cout << "The value of gameOver is " << game_over << endl;
-    
-    // /***********************************************
-    // *  Overflow example
-    // **********************************************/
-    // short value1 {30000};
-    // short value2 {1000};
-    // short  product {value1 * value2};
-    
-    // cout << "The product of " << value1 <<  " and " << value2 << " is " <<  product << endl;
-    
+    cout << "sizeof using variable names" << endl;
+    int age {21};
+    cout << "age is " << sizeof(age) << " bytes." << endl;
+    // or
+     cout << "age is " << sizeof age << " bytes." << endl;
+     
+    double wage { 22.24};
+    cout << "wage is " << sizeof(wage) << " bytes." << endl;
+    // or
+    cout << "wage is " << sizeof wage << " bytes." << endl;
+
+
     return 0;
 }
 
