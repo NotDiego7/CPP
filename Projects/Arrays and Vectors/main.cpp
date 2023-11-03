@@ -1,12 +1,12 @@
-// #include <iostream>
-// using namespace std;
+#include <iostream>
+using namespace std;
 
 // int main() {
 
 //     const int days_in_month {30}; // Roughly
 //     int month [days_in_month] {0};
 
-//     cout << month[29] << endl;
+//     cout << month[29] << endl << month[17] << endl;
 // }
 
 // #include <iostream>
@@ -35,12 +35,12 @@
 //     cout << table_arr[0][0] << table_arr[1][1] << endl;
 // }
 
-#include <iostream>
-#include <vector>
-using namespace std;
+// #include <iostream>
+// #include <vector>
+// using namespace std;
 
-int main() {
-    vector <string> word {"Lame."};
+// int main() {
+//     vector <string> word {"Lame."};
 
-    cout << word << endl;
-}
+//     cout << word << endl;
+// }
